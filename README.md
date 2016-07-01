@@ -13,7 +13,13 @@
 |6   |   >= |
 |7   |   regex|
 
-###Exemplo de utilização
+###Exemplo de Aplicação
+```
+perguntas:
+  #"Experiência académica e profissional"
+  #"Criação do Projeto (Surgimento da ideia e data/ano de criação)"
+```
+
 
 ```XML
 <perguntas>
