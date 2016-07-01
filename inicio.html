@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="newProject.js"></script>
+
+    <script src="jquery-linedtextarea.js"></script>
+    <link href="jquery-linedtextarea.css" type="text/css" rel="stylesheet" />
+    <link href="inicio.css" type="text/css" rel="stylesheet" />
+
+    <title>Novo Projeto</title>
+  </head>
+  <body>
+    <h1>Novo Projeto</h1>
+    <input type="button" name="name" value="load example" id="load_example">
+    <div class="dsl" >
+
+      <textarea id="dsl_input_text" rows="33" cols="55" class="lined">
+      </textarea>
+
+      <br>
+      <input id="submitDSL" class="roundButton" type="image" src="imgs/ic_input_black_36dp_1x.png" value="send">
+    </div>
+
+    <h3>Debug</h3>
+    <div class="linedwrap" style="width: 90%;">
+      <div id="msg">
+        <textarea id="result_xml" class="results" rows="32"></textarea>
+      </div>
+      <input id="download_file" class="roundButton" type="image" src="imgs/ic_file_download_black_36dp_1x.png">
+    </div>
+
+  </body>
+</html>

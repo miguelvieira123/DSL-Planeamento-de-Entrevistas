@@ -1,0 +1,22 @@
+.roundButton {
+ color: #000;
+ font-size: 0;
+ border: none;
+ margin: 6px;
+ padding: 9px;
+ background-color: #86B404;
+ border-radius: 100%
+}
+
+.results{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 23px;
+}
