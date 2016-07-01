@@ -8,9 +8,6 @@ $('#load_example').click(function(){
   $('#dsl_input_text').val("\nname: Gammers\n\nmeta:\n    # idade\n    # nome\n    # morada\n    # telefone\n\nperguntas:\n    # primeiro jogo\n    # genero preferido\n    # jogo favorito\n    # comunidade a que pertence\n    # amigos\n    # (\"\\s*Porto[\\s]?\", morada ) montou servidores de jogos?\n    # ( idade>20 ) jogou Doom?\n\nurls:\n    # www.mp.pt");
 });
 
-
-
-
   // Gramatica
       $("#submitDSL").click(function () {
           var t = $('#dsl_input_text').val();
@@ -40,12 +37,16 @@ $('#load_example').click(function(){
                     //$("#msg").append("<p>" + data["msg"][i] + "<p>");
                     $("#result_xml").val( $("#result_xml").val() + data["msg"][i]+"\n");
                 }
-                if (data["succ"] == 0) {
+                if (data["succ"] == 0 && data["valid_xml"] == "yes") {
                   $(".debug-info").remove();
                   $('#msg').append('<br><div style="text-align:center;" class="roundButton" id="download_file"><img src="imgs/ic_file_download_black_36dp_1x.png" alt="download_file"><p>Descarregar</p></div>');
                   $("#download_file").click(function(){  get_result(); });
                   $('#msg').prepend('<span class="debug-info"><img src="imgs/ic_spellcheck_black_36dp_1x.png"><p>Sucesso</p></span>');
-                }else {
+                }else if (data["valid_xml"] == "no") {
+                  $("#download_file").remove();
+                  $(".debug-info").remove();
+                  $('#msg').prepend('<span class="debug-info"><img src="imgs/ic_error_outline_black_36dp_1x.png"><p>Erro: XML inválido</p></span>');
+                }else{
                   $("#download_file").remove();
                   $(".debug-info").remove();
                   $('#msg').prepend('<span class="debug-info"><img src="imgs/ic_error_outline_black_36dp_1x.png"><p>Erro</p></span>');
@@ -55,13 +56,13 @@ $('#load_example').click(function(){
       });
 
 
-  
+
 $(document).ready(function() {
     $('.menu').dropit();
 });
 
 
-  
+
 
 function get_result(){
   var content = $('#result_xml').val();
