@@ -3,34 +3,38 @@
   <head>
     <meta charset="utf-8">
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="newProject.js"></script>
-
     <script src="jquery-linedtextarea.js"></script>
     <link href="jquery-linedtextarea.css" type="text/css" rel="stylesheet" />
     <link href="inicio.css" type="text/css" rel="stylesheet" />
 
     <title>Novo Projeto</title>
   </head>
+
   <body>
     <h1>Novo Projeto</h1>
     <input type="button" name="name" value="load example" id="load_example">
-    <div class="dsl" >
 
-      <textarea id="dsl_input_text" rows="33" cols="55" class="lined">
-      </textarea>
-
-      <br>
-      <input id="submitDSL" class="roundButton" type="image" src="imgs/ic_input_black_36dp_1x.png" value="send">
-    </div>
-
-    <h3>Debug</h3>
-    <div class="linedwrap" style="width: 90%;">
-      <div id="msg">
-        <textarea id="result_xml" class="results" rows="32"></textarea>
+    <div class="board" style="width: 90%;">
+      <div class="dsl" >
+        <textarea id="dsl_input_text" rows="33" cols="55" class="lined"></textarea>
+        <br>
+        <div style="text-align:center;" class="roundButton" id="submitDSL">
+          <img src="imgs/ic_input_black_36dp_1x.png" alt="submit">
+          <p>submit</p>
+        </div>
       </div>
-      <input id="download_file" class="roundButton" type="image" src="imgs/ic_file_download_black_36dp_1x.png">
     </div>
 
+    <div class="board" style="width: 90%;">
+      <span class="debug-info">
+        <img src="imgs/ic_error_outline_black_36dp_1x.png">
+        <p>Nenhum texto foi submetido.</p>
+      </span>
+      <div id="msg" style="padding: 3px;">
+      </div>
+    </div>
+    
   </body>
 </html>

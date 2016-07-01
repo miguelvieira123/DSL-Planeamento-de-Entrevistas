@@ -51,11 +51,14 @@ $('#dsl_input_text').text("name: \"Projeto Natura\"\nmeta:\n  #\"Nome\"\n  #\"Id
                       $("#result_xml").val( $("#result_xml").val() + data["msg"][i]+"\n");
                   }
                   if (data["succ"] == 0) {
-                    $('#download_file').attr("disabled", false);
-                    $("#download_file").css("background-color","#86B404");
+                    $(".debug-info").remove();
+                    $('#msg').append('<br><div style="text-align:center;" class="roundButton" id="download_file"><img src="imgs/ic_file_download_black_36dp_1x.png" alt="download_file"><p>Download</p></div>');
+                    $("#download_file").click(function(){  get_result(); });
+                    $('#msg').prepend('<span class="debug-info"><img src="imgs/ic_spellcheck_black_36dp_1x.png"><p>Sucesso</p></span>');
                   }else {
-                    $('#download_file').attr("disabled", true);
-                    $("#download_file").css("background-color","#999966");
+                    $("#download_file").remove();
+                    $(".debug-info").remove();
+                    $('#msg').prepend('<span class="debug-info"><img src="imgs/ic_error_outline_black_36dp_1x.png"><p>Erro</p></span>');
                   }
 
               }
@@ -63,11 +66,13 @@ $('#dsl_input_text').text("name: \"Projeto Natura\"\nmeta:\n  #\"Nome\"\n  #\"Id
       });
 
 //Download file
-$("#download_file").click(function(){
+$("#download_file").click(function(){  get_result(); });
+
+function get_result(){
   var content = $('#result_xml').val();
   uriContent = "data:application/octet-stream," + encodeURIComponent(content);
   saveAs(uriContent, "new_project.xml");
-});
+}
 
 function saveAs(uri, filename) {
   var link = document.createElement('a');

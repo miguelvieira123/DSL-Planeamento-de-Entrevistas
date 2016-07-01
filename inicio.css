@@ -1,22 +1,54 @@
+
+.debug-info img{
+	display: inline-block;
+}
+.debug-info p{
+	display: inline-block;
+}
+
+
+.roundButton:hover { 
+    background-color: #33cccc;
+    cursor: pointer;
+}
+
 .roundButton {
- color: #000;
- font-size: 0;
- border: none;
- margin: 6px;
- padding: 9px;
- background-color: #86B404;
- border-radius: 100%
+ 	width: 20%;
+ 	border: none;
+ 	border-radius: 0%;
+ 	font-size: bold;
+ 	margin: auto;
+ 	background-color: #66d9ff;
+ 	color: #000;
+}
+
+.roundButton p{
+ 	color: #000;
+ 	font-size: bold;
+	display: inline-block;
+ 	vertical-align: middle;
+ 	line-height: normal;  
 }
 
 .results{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
 }
 
+
+
 img{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 23px;
+  	display: inline-block;
+  	vertical-align: middle;
+  	line-height: normal; 
 }
+
+
+.board {
+    float: left;
+    margin: 5px;
+    padding: 15px;
+    max-width: 800px;
+    border: 1px solid black;
+} 
