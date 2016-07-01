@@ -3,9 +3,8 @@
 
 ##Códigos para condições nas tags de perguntas
 
-
-|num |   OP|
-|----|------|
+|codigo |   OP|
+|-------|------|
 |1   |   == |
 |2   |   != |
 |3   |   <  |
@@ -14,3 +13,11 @@
 |6   |   >= |
 |7   |   regex|
 
+###Exemplo de utilização
+
+```XML
+<perguntas>
+    <p metafield="Nome" op="7" value="JJ">Experiência académica e profissional</p>
+    <p>Criação do Projeto (Surgimento da ideia e data/ano de criação)</p>
+    ...
+```
