@@ -18,7 +18,7 @@
  	border-radius: 0%;
  	font-size: bold;
  	margin: auto;
- 	background-color: #66d9ff;
+ 	background-color: #248fc1;
  	color: #000;
 }
 
@@ -36,7 +36,11 @@
   	margin-right: auto;
 }
 
-
+.loading{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 img{
   	display: inline-block;
@@ -52,3 +56,8 @@ img{
     max-width: 800px;
     border: 1px solid black;
 } 
+
+
+
+
+

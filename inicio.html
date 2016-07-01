@@ -5,16 +5,31 @@
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="newProject.js"></script>
+    <script src="dropit.js"></script>
     <script src="jquery-linedtextarea.js"></script>
     <link href="jquery-linedtextarea.css" type="text/css" rel="stylesheet" />
     <link href="inicio.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="dropit.css" type="text/css" />
 
-    <title>Novo Projeto</title>
+    <title>Plano para Entrevistas</title>
   </head>
 
   <body>
-    <h1>Novo Projeto</h1>
-    <input type="button" name="name" value="load example" id="load_example">
+    <h1>Plano para Entrevistas</h1>
+
+<ul class="menu">
+    <li>
+        <a href="#">Carregar exemplo</a>
+        <ul>
+            <li><span>Natura</span></li>
+            <li><span>Natura (Condições)</span></li>
+            <li><span>Natura (Erro sintax)</span></li>
+            <li><span>Natura (Erro semantico)</span></li>
+        </ul>
+    </li>
+</ul>
+
+    
 
     <div class="board" style="width: 90%;">
       <div class="dsl" >
@@ -22,7 +37,7 @@
         <br>
         <div style="text-align:center;" class="roundButton" id="submitDSL">
           <img src="imgs/ic_input_black_36dp_1x.png" alt="submit">
-          <p>submit</p>
+          <p>Submeter</p>
         </div>
       </div>
     </div>
