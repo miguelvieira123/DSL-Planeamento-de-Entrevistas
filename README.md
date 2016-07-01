@@ -14,13 +14,13 @@
 |7   |   regex|
 
 ###Exemplo de Aplicação
+O excerto de uma frase válida,
 ```
 perguntas:
-  #"Experiência académica e profissional"
+  #("JJ" regex "Nome") "Experiência académica e profissional"
   #"Criação do Projeto (Surgimento da ideia e data/ano de criação)"
 ```
-
-
+gera o XML que se segue:
 ```XML
 <perguntas>
     <p metafield="Nome" op="7" value="JJ">Experiência académica e profissional</p>
