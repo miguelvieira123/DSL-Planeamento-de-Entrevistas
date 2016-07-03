@@ -13,7 +13,7 @@
 |6   |   >= |
 |7   |   regex|
 
-###Exemplo de Aplicação
+###Exemplo de Transformação
 O excerto de uma frase válida,
 ```
 perguntas:
