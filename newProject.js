@@ -1,3 +1,5 @@
+var file_name = "a";
+
 $(document).ready(function() {
 
 $(function () { $(".lined").linedtextarea({}); });
@@ -38,6 +40,7 @@ $('#load_example').click(function(){
                     $("#result_xml").val( $("#result_xml").val() + data["msg"][i]+"\n");
                 }
                 if (data["succ"] == 0 && data["valid_xml"] == "yes") {
+                  file_name = data["filename"];
                   $(".debug-info").remove();
                   $('#msg').append('<br><div style="text-align:center;" class="roundButton" id="download_file"><img src="imgs/ic_file_download_black_36dp_1x.png" alt="download_file"><p>Descarregar</p></div>');
                   $("#download_file").click(function(){  get_result(); });
@@ -67,7 +70,7 @@ $(document).ready(function() {
 function get_result(){
   var content = $('#result_xml').val();
   uriContent = "data:application/octet-stream," + encodeURIComponent(content);
-  saveAs(uriContent, "new_project.xml");
+  saveAs(uriContent, file_name+".xml");
 }
 
 function saveAs(uri, filename) {

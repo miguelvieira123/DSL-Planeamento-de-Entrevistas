@@ -20,13 +20,17 @@
       $i=0;
       $xml_str = "";
       foreach($out as $line) {
-        if (strpos("_".$line, 'Marpa::R2 exception') !== false) {
-          //nothing...
-        }else {
-          $vars["msg"][$i] = $line;
-          $xml_str .= $line;
+        if (strpos("_".$line, 'Marpa::R2 exception') == false) {
+          if (strpos("_".$line, 'FILENAME:') == false) {
+            $vars["msg"][$i] = $line;
+            $xml_str .= $line;
+            $i++;
+          }else {
+            $match = preg_split("/:/", $line);
+            $vars["filename"] = $match[1];
+          }
         }
-          $i++;
+
       }
 
       //validar XML com schema

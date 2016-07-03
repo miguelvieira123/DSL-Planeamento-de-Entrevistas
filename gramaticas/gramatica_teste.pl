@@ -52,7 +52,7 @@ END_OF_SOURCE
 });
 
 my $re = Marpa::R2::Scanless::R->new({ grammar => $grammar, semantics_package =>'main' });
-my $input = "name: \"Gammers\" metas:     # \"idade\"     # \"nome\"     # \"morada\"     # \"telefone\" perguntas:     #(\"lisboa\" regex \"morada\")\"O primeiro grande jogo da programacao\"     # \"genero preferido\"     # \"jogo favorito\"     # \"comunidade a que pertence\"     # ( \"20\" < \"idade\" ) \"amigos\"      urls:     # \"www.mp.pt\"";
+my $input = "name: \"Gammers\" meta:     # \"idade\"     # \"nome\"     # \"morada\"     # \"telefone\" perguntas:     #(\"lisboa\" regex \"morada\")\"O primeiro grande jogo da programacao\"     # \"genero preferido\"     # \"jogo favorito\"     # \"comunidade a que pertence\"     # ( \"20\" < \"idade\" ) \"amigos\"      urls:     # \"www.mp.pt\"";
 *STDERR = *STDOUT;
 $input = join(' ', @ARGV);
 $input =~ s/\\n/\n/g;
@@ -68,6 +68,7 @@ $value->{'editable'} = 'yes';
 $value->{'time'} = strftime("%d-%m-%y %H:%M:%S", localtime);
 
 #--- XML::Simple Print-Out ---#
+print "FILENAME:".$$value{'name'}."\n";
 print XMLout($value, RootName => "project", XMLDecl => 1, ContentKey => 'content');
 
 #--- DSL semantics ---#
