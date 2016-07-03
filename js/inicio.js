@@ -6,9 +6,19 @@ $(function () { $(".lined").linedtextarea({}); });
 
 $('#dsl_input_text').text("name: \"Projeto Natura\"\nmeta:\n  #\"Nome\"\n  #\"Idade\"\n  #\"Sexo\"\n  #\"Estado Civil\"\n  #\"Local de residência\"\n  #\"Profissão\"\n  #\"Formação Académica\"\n  #\"Contacto\"\n\nperguntas:\n  #\"Experiência académica e profissional\"\n  #\"Criação do Projeto (Surgimento da ideia e data/ano de criação)\"\n  #\"Entrada no projeto (caso não seja o criador)\"\n  #\"Colaboradores e ex colaboradores\"\n  #\"Objetivo(s) do projeto\"\n  #\"Área(s) de intervenção\"\n  #\"Trabalho realizado\"\n  #\"Neste momento o que se encontra a desenvolver\"\n  #\"Planos para o futuro\"\n\nurls:\n  #\"http://www.gpsmon.org/zip1/index.php\"");
 
-$('#load_example').click(function(){
-  $('#dsl_input_text').val("\nname: Gammers\n\nmeta:\n    # idade\n    # nome\n    # morada\n    # telefone\n\nperguntas:\n    # primeiro jogo\n    # genero preferido\n    # jogo favorito\n    # comunidade a que pertence\n    # amigos\n    # (\"\\s*Porto[\\s]?\", morada ) montou servidores de jogos?\n    # ( idade>20 ) jogou Doom?\n\nurls:\n    # www.mp.pt");
+$('#ex1').click(function(){
+  $('#dsl_input_text').text("name: \"Projeto Natura\"\nmeta:\n  #\"Nome\"\n  #\"Idade\"\n  #\"Sexo\"\n  #\"Estado Civil\"\n  #\"Local de residência\"\n  #\"Profissão\"\n  #\"Formação Académica\"\n  #\"Contacto\"\n\nperguntas:\n  #\"Experiência académica e profissional\"\n  #\"Criação do Projeto (Surgimento da ideia e data/ano de criação)\"\n  #\"Entrada no projeto (caso não seja o criador)\"\n  #\"Colaboradores e ex colaboradores\"\n  #\"Objetivo(s) do projeto\"\n  #\"Área(s) de intervenção\"\n  #\"Trabalho realizado\"\n  #\"Neste momento o que se encontra a desenvolver\"\n  #\"Planos para o futuro\"\n\nurls:\n  #\"http://www.gpsmon.org/zip1/index.php\"");
 });
+$('#ex2').click(function(){
+  $('#dsl_input_text').text("name: \"Projeto Natura\"\nmeta:\n  #\"Nome\"\n  #\"Idade\"\n  #\"Sexo\"\n  #\"Estado Civil\"\n  #\"Local de residência\"\n  #\"Profissão\"\n  #\"Formação Académica\"\n  #\"Contacto\"\n\nperguntas:\n  #\"Experiência académica e profissional\"\n  #\"Criação do Projeto (Surgimento da ideia e data/ano de criação)\"\n  #\"Entrada no projeto (caso não seja o criador)\"\n  #(\"30\">\"Idade\")\"Colaboradores e ex colaboradores\"\n  #\"Objetivo(s) do projeto\"\n  #\"Área(s) de intervenção\"\n  #\"Trabalho realizado\"\n  #\"Neste momento o que se encontra a desenvolver\"\n  #(\"José João\"regex\"Nome\")\"Planos para o futuro\"\n\nurls:\n  #\"http://www.gpsmon.org/zip1/index.php\"");
+});
+$('#ex3').click(function(){
+  $('#dsl_input_text').text("name: \"Projeto Natura\"\nmeta:\n  #\"Nome\"\n  #\"Idade\"\n  #\"Sexo\"\n  #\"Estado Civil\"\n  #\"Local de residência\"\n  #\"Profissão\"\n  #\"Formação Académica\"\n  #\"Contacto\"\n\nperguntas:\n  #\"Experiência académica e profissional\"\n  #\"Criação do Projeto (Surgimento da ideia e data/ano de criação)\"\n  #\"Entrada no projeto (caso não seja o criador)\"\n  #\"(\"30\">\"Idade\")Colaboradores e ex colaboradores\"\n  #\"Objetivo(s) do projeto\"\n  #\"Área(s) de intervenção\"\n  #\"Trabalho realizado\"\n  #\"Neste momento o que se encontra a desenvolver\"\n  #(\"José João\"regex\"Nome\")\"Planos para o futuro\"\n\nurls:\n  #\"http://www.gpsmon.org/zip1/index.php\"");
+});
+$('#ex4').click(function(){
+  $('#dsl_input_text').text("name: \"Projeto Natura\"\nmeta:\n  #\"Nome\"\n  #\"Idade\"\n  #\"Sexo\"\n  #\"Estado Civil\"\n  #\"Local de residência\"\n  #\"Profissão\"\n  #\"Formação Académica\"\n  #\"Contacto\"\n\nperguntas:\n  #\"Experiência académica e profissional\"\n  #\"Criação do Projeto (Surgimento da ideia e data/ano de criação)\"\n  #\"Entrada no projeto (caso não seja o criador)\"\n  #(\"30\">\"Idade\")\"Colaboradores e ex colaboradores\"\n  #\"Objetivo(s) do projeto\"\n  #\"Área(s) de intervenção\"\n  #\"Trabalho realizado\"\n  #\"Neste momento o que se encontra a desenvolver\"\n  #(\"José João\"regex\"Nome\")\"Planos para o futuro\"\n\nurls:\n  #\"http://www.gpsmon.org/zip1/index.php\"");
+});
+
 
   // Gramatica
       $("#submitDSL").click(function () {

@@ -14,7 +14,7 @@
 
 
       //executar gramatica
-      exec("perl ./gramaticas/gramatica_teste.pl ".$texto, $out, $code);
+      exec("perl ./gramaticas/gramatica.pl ".$texto, $out, $code);
 
       // recolher prints
       $i=0;
@@ -37,13 +37,30 @@
       if ($code == 0) {
         # code...
         $xml= new DOMDocument();
-        $xml->loadXML($xml_str); // Or load if filename required
-        if (!$xml->schemaValidate("projeto.xsd")){ // Or schemaValidateSource if string used.
+        $xml->loadXML($xml_str);
+        if (!$xml->schemaValidate("schemas/projeto.xsd")){
           $vars["valid_xml"]="no";
         }else {
           $vars["valid_xml"]="yes";
+          //gravar projeto no disco
+          $xml2 = simplexml_load_string($xml_str);
+          $pr = $xml2->xpath("//project");
+          $xml_file_name = preg_replace("/[\s]/m", "_", $pr[0]['name']);
+          if(file_exists("./files/".$xml_file_name.".xml")==false){
+              $list = new DOMDocument();
+              $list->load("./files/list.xml");
+              $root = $list->getElementsByTagName("list");
+              $new_elem = $list->createElement("p",$xml_file_name);
+              $root->item(0)->appendChild($new_elem);
+              $list->save("./files/list.xml");
+              $xml->save("./files/".$xml_file_name.".xml");
+          }
         }
       }
+
+
+
+
 
       //enviar mensagens para o cliente
       $vars["succ"] = $code;
