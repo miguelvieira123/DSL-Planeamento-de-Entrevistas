@@ -6,6 +6,7 @@ https://github.com/miguelvieira123/AssistenteEntrevistas
 
 ##Arquitetura
 <img src="/imgs/DSL.png" width="70%" heigth="70%">
+<p>A DSL encontra-se no script PERL, e usa o módulo Marpa::R2 para especificar a grámatica.</p>
 
 ##Exemplo
 ```
